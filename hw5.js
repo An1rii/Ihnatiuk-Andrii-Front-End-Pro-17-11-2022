@@ -6,23 +6,22 @@ const todayDate= new Date()
 const age = todayDate.getFullYear() - Number(birthday)
 
 const capitalArr = ["Киев", 'London','Вашингтонн']
-const sportArr = ['бокс', 'футболл', 'баскетбол']
+const sportArr = ['бокс', 'футбол', 'баскетбол']
 
 const nameSportsmanObj={
-    'бокс':'Тайсонн',
-    'футболл':'Messi',
-    'баскетбол' : 'Kobye'
+    'бокс':'Тайсон',
+    'футбол':'Messi',
+    'баскетбол':'Kobie'
 }
-const boxSport='Тайсон'
 
 const checkFuncByParam =(willCheckItem)=> (it) => it === willCheckItem
 
 const showCityMessage = () => {
-    capitalArr.some(checkFuncByParam(city)) ? alert(`Вы живете в столице ${city}`):alert(`Вы живете в городе ${city}`)
+    capitalArr.some(checkFuncByParam(city)) ? alert(`Ти живеш у столиці ${city}`):alert(`Ти живеш у місті ${city}`)
 }
 
 const showSportMessage=()=>{
-    sportArr.some(checkFuncByParam(sport)) ? alert(`Круто ты хочешь стать как ${nameSportsmanObj[sport]}`) : null
+    sportArr.some(checkFuncByParam(sport)) ? alert(`Круто! Хочеш стати ${nameSportsmanObj[sport]}`) : null
 }
 
 
