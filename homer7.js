@@ -1,4 +1,6 @@
-const time = prompt("Скільки годин у користувача?");
-m = ("60");
-s = ("60");
-alert(time *  m  *  s + "сек в ч ")
+
+
+const  time  =  prompt ( "Скільки годин у користувача?" ) ;
+minute  =   3600;
+second  =   3600;
+alert(`${time * minute * second} сек в ч`)
