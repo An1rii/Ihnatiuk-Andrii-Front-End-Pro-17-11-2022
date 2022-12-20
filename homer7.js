@@ -1,4 +1,5 @@
 
+
 const  time  =  prompt ( "Скільки годин у користувача?" ) ;
 minute  =   3600;
 second  =   3600;
