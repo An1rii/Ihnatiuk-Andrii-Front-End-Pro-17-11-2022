@@ -1,13 +1,13 @@
 const arraySize = +prompt('Enter a digit og Array')
 const array = [];
-for (let i = 0 ; i  < arraySize; i++){
-    let digit = +(prompt('Enter digit #' + (i + 1)));
+for (let num = 0 ; num  < arraySize; num++){
+    let digit = +(prompt('Enter digit #' + (num + 1)));
     array.push(digit);
 }
 console.log(array);
 
-Array.prototype.sort();
+array.sort();
 console.log(array);
 
-array.splice(1,3);
+array.splice(2,4);
 console.log(array);
