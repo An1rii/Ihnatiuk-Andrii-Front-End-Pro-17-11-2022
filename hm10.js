@@ -1,23 +1,18 @@
-const products = [
-    {name: 'Apple', price: 20},
-    {name: 'Cherry', price: 10},
-    {name: 'Banana', price: 15},
-    {name: 'Orange', price: 25},
-    {name: 'Lemon', price: 17},
-    {name: 'Pear', price: 30}
-];
+const products = [{name: 'Apple', price: 20}, {name: 'Cherry', price: 10}, {name: 'Banana', price: 15}, {
+    name: 'Orange',
+    price: 25
+}, {name: 'Lemon', price: 17}, {name: 'Pear', price: 30}];
 
 const GRN_PER_DOLLAR = 41;
 const DISCOUNT_START_FROM = 10000;
 const DISCOUNT = 20;
-const number = getNumber();
-const count = getCount(number)
-ShowTotalPrice(number,count)
 
-for (let prodId = 0;prodId < products.length;prodId++) {
+for (let prodId = 0; prodId < products.length; prodId++) {
     console.log(`${prodId + 1} ${products[prodId].name} ${products[prodId].price}`);
+
 }
-function getNumber(){
+
+function getNumber() {
     let prodNum;
     do {
         prodNum = prompt('Write product number:');
@@ -27,36 +22,40 @@ function getNumber(){
         }
         prodNum--;
     } while (prodNum < 0 || prodNum > products.length - 1 || isNaN(prodNum));
+    return prodNum;
 }
-if (prodCount === null) {
-    break;
-}
-let prodCount;
-function getCount(){
+getNumber()
 
+
+function showTotalPrice() {
+    let prodCount;
     do {
         prodCount = prompt('Write product count:');
-
-
+        if (prodCount === null) {
+            break;
+        }
         prodCount = +prodCount;
-    } while(prodCount <= 0 || isNaN(prodCount));
-}
-getCount()
-getNumber()
-if (typeof prodNum === 'number') {
-    const product = products[prodNum];
-
-    console.log(product);
+    } while (prodCount <= 0 || isNaN(prodCount));
 
 
-    if (typeof prodCount === 'number') {
-        const totalProdPrice = prodCount * product.price;
+    if (typeof prodNum === 'number') {
+        const product = products[prodNum];
 
-        console.log(`Total price: $${totalProdPrice}`);
+        console.log(product);
 
-        if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
-            console.log(`Congrats, you get a discount ${DISCOUNT}%`);
-            console.log(`Your total price is: ${totalProdPrice * (100 - DISCOUNT) / 100}`);
+
+        if (typeof prodCount === 'number') {
+            const totalProdPrice = prodCount * product.price;
+
+            console.log(`Total price: $${totalProdPrice}`);
+
+
+            if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
+                console.log(`Congrats, you get a discount ${DISCOUNT}%`);
+                console.log(`Your total price is: ${totalProdPrice * (100 - DISCOUNT) / 100}`);
+
+            }
         }
     }
 }
+   showTotalPrice()
