@@ -54,3 +54,9 @@ let users = [
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
 ]
+document.write('<ol start="0">');
+users.forEach( user => {
+    document.write(`<li>${user.type} <span style="color: #1a55cc">${user.name}</span> 
+          `);
+});
+document.write('<ol>');
