@@ -10,6 +10,7 @@ products = [
 const GRN_PER_DOLLAR = 41;
 const DISCOUNT_START_FROM = 10000;
 const DISCOUNT = 20;
+
 function showPrice (){
     for (let prodId = 0; prodId < products.length; prodId++) {
         console.log(`${prodId + 1} ${products[prodId].name} ${products[prodId].price}`);
@@ -18,7 +19,7 @@ function showPrice (){
 
 
 let prodNum;
-function prodNumber() {
+const prodNumber = () =>{
     do {
         prodNum = prompt('Write product number:');
 
@@ -30,8 +31,8 @@ function prodNumber() {
 }
 
 let prodCount;
-function showTotalPrice() {
 
+const getProdCount = ()  =>{
     if (typeof prodNum === 'number') {
         const product = products[prodNum];
         console.log(product);
@@ -44,21 +45,29 @@ function showTotalPrice() {
             }
             prodCount = +prodCount;
         } while (prodCount <= 0 || isNaN(prodCount));
-        if (typeof prodCount === 'number') {
-
-            const totalProdPrice = prodCount * product.price;
-            console.log(`Total price: $${totalProdPrice}`);
-
-            if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
-
-                console.log(`Congrats, you get a discount ${DISCOUNT}%`);
-                console.log(`Your total price is: ${totalProdPrice * (100 - DISCOUNT) / 100}`);
-            }
-        }
     }
 }
+
+const showTotalPrice = () =>{
+    if (typeof prodCount === 'number') {
+
+        const totalProdPrice = prodCount * product.price;
+        console.log(`Total price: $${totalProdPrice}`);
+
+        if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
+
+            console.log(`Congrats, you get a discount ${DISCOUNT}%`);
+            console.log(`Your total price is: ${totalProdPrice * (100 - DISCOUNT) / 100}`);
+        }
+    }
+
+}
+
+
 
 
 showPrice()
 prodNumber()
-showTotalPrice()
+getProdCount()
+const product = prodNum ? products[prodNum] : null;
+showTotalPrice(product, prodCount)
