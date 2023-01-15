@@ -20,7 +20,7 @@ let users = [
     {
         "index": 2,
         "isActive": false,
-        "balance": "3,976.41",
+        "balance": "$3,976.41",
         "name": "Middleton Chaney",
         "gender": "male",
         "phone": "+1 (995) 591-2478",
@@ -38,7 +38,7 @@ let users = [
     {
         "index": 4,
         "isActive": true,
-        "balance":" $3,261.65",
+        "balance": "$3,261.65",
         "name": "Mcfadden Horne",
         "gender": "male",
         "phone": "+1 (942) 565-3988",
@@ -54,8 +54,11 @@ let users = [
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
 ]
-users.reduce((summ, curr)=> {
+const total = users.reduce((summ, curr)=> {
     return summ += Number(curr.balance.slice(1).replaceAll(",", ""))
 }, 0)
-
-
+console.log(total)
+console.log(users[0])
+console.log(users[1])
+console.log(users[2])
+console.log(users[4])
