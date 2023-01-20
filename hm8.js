@@ -6,22 +6,19 @@
 // for(let i = 10; i < 110; i+= 10)
 //     console.log(i, i * 27)
 // 3.Дане ціле число. Вивести всі цілі числа від 1 до 100, квадрат яких не перевищує числа N.
-// //Не понимаю как делать
-// // function getPrimes(num){
-// //     const number = [];
-// //     const array = [];
-// //     for(let i = 2; i <=num; i++){
-// //       if (num % i === 0) {
-// //   return "It's not a prime number";
-// // }
-// //     }
-// // return "It's a prime number";
-// // }
-// // console.log(getPrimes(100))
+// let n = 100;
+// for (let i = 2; i <= n; i++) {
+//     for (let j = 2; j <= i; j++) {
+//         if ((i % j === 0) && (j !== i)) {
+//             break;
+//         } else {
+//             console.log(i);
+//             break;
+//         }
+//     }
+// }
 // 4.Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 // function getPrimes(num){
-//     const number = [];
-//     const array = [];
 //     for(let i = 2; i <=num; i++){
 //       if (num % i === 0) {
 //   return "It's not a prime number";
@@ -30,7 +27,7 @@
 // return "It's a prime number";
 // }
 // console.log(getPrimes(100))
-//5.Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
+// 5.Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
 // let number = parseInt(prompt("enter number"));
 //
 // if (number % 3 === 0 && number ) {

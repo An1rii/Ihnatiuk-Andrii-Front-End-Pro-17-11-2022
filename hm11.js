@@ -58,7 +58,10 @@ const total = users.reduce((summ, curr)=> {
     return summ += Number(curr.balance.slice(1).replaceAll(",", ""))
 }, 0)
 console.log(total)
-console.log(users[0])
-console.log(users[1])
-console.log(users[2])
-console.log(users[4])
+arr=["$2,226.60","$2,613.77","$3,976.41","$1,934.58","$3,261.65","$1,790.56"]
+
+const balance = Number(curr.balance.slice(1).replaceAll(",", ""));
+if (0>2000) {
+    phones.push(arr)
+}
+console.log(balance)
